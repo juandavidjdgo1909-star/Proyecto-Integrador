@@ -34,13 +34,6 @@ CSS3 – estilos, variables CSS, responsividad
 
 JavaScript (ES6+) – lógica del tema, consumo de API, render dinámico
 
-Rick and Morty API – fuente de datos (https://rickandmortyapi.com/
-)
-
-🖼️ Vista previa del proyecto
-
-(Puedes agregar screenshots aquí si quieres)
-
 📌 Mejoras futuras
 
 Agregar paginación
