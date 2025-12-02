@@ -1,7 +1,6 @@
 :root {
     --font-family: 'Poppins', sans-serif;
 
-    /* Tema Claro */
     --bg-color-light: #F4F7F9;
     --header-bg-light: #FFFFFF;
     --card-bg-light: #FFFFFF;
@@ -11,7 +10,6 @@
     --border-color-light: #E5E9ED;
     --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.08);
 
-    /* Tema Oscuro */
     --bg-color-dark: #12181F;
     --header-bg-dark: #1A222A;
     --card-bg-dark: #1A222A;
@@ -22,7 +20,7 @@
     --shadow-dark: 0 4px 15px rgba(0, 194, 255, 0.1);
 }
 
-/* --- Estilos Base y Transiciones --- */
+
 body {
     font-family: var(--font-family);
     background-color: var(--bg-color, var(--bg-color-light));
@@ -42,7 +40,6 @@ body.dark-mode {
     --shadow: var(--shadow-dark);
 }
 
-/* --- Header y Barra de Búsqueda --- */
 header {
     background-color: var(--header-bg, var(--header-bg-light));
     display: flex;
@@ -97,7 +94,7 @@ header h1 {
     align-items: center;
 }
 
-/* --- Contenedor y Tarjetas de Personajes --- */
+
 .container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -204,7 +201,6 @@ input:checked + .slider:before {
     transform: translateX(24px);
 }
 
-/* --- Responsividad --- */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -213,4 +209,5 @@ input:checked + .slider:before {
     .search-input {
         width: 100%;
     }
+
 }
