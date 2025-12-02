@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchInput = document.querySelector('.search-input');
     const charactersContainer = document.getElementById('characters-container');
 
-    // --- Lógica del Tema ---
     const applyTheme = (isDark) => {
         if (isDark) {
             body.classList.add('dark-mode');
@@ -25,9 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const savedTheme = localStorage.getItem('theme');
     applyTheme(savedTheme === 'dark');
 
-    // --- Lógica de la API y renderizado ---
     const renderCharacters = (characters) => {
-        charactersContainer.innerHTML = ''; // Limpia el contenedor
+        charactersContainer.innerHTML = '';
         if (characters.length === 0) {
             charactersContainer.innerHTML = '<p class="no-results">No se encontraron personajes con ese nombre.</p>';
             return;
@@ -36,7 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
         characters.forEach(character => {
             const characterElement = document.createElement('article');
             characterElement.classList.add('character');
-            // Usando la estructura de tarjeta mejorada
             characterElement.innerHTML = `
                 <img src="${character.image}" alt="Imagen de ${character.name}">
                 <div class="character-info">
@@ -55,7 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
         fetch(apiUrl)
             .then(response => {
                 if (!response.ok) {
-                    // Si la API devuelve un error (ej. 404), lo manejamos como si no hubiera resultados
                     return Promise.resolve({ results: [] });
                 }
                 return response.json();
@@ -69,13 +65,12 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     };
 
-    // --- Evento de Búsqueda ---
     searchForm.addEventListener('submit', (e) => {
-        e.preventDefault(); // Evita que la página se recargue
+        e.preventDefault();
         const searchTerm = searchInput.value.trim();
         fetchCharacters(searchTerm);
     });
 
-    // Carga inicial de todos los personajes
     fetchCharacters();
+
 });
