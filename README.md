@@ -41,49 +41,6 @@ Rick and Morty API – fuente de datos (https://rickandmortyapi.com/
 
 (Puedes agregar screenshots aquí si quieres)
 
-![Preview](ruta-de-tu-imagen.png)
-
-⚙️ Cómo usar el proyecto
-
-Clona este repositorio:
-
-git clone https://github.com/tuusuario/tu-repositorio.git
-
-
-Entra al proyecto:
-
-cd tu-repositorio
-
-
-Abre el archivo:
-
-index.html
-
-
-¡Y ya puedes usar la aplicación!
-
-🧩 Funcionamiento interno
-🔗 Consumo de API
-
-El proyecto utiliza la URL:
-
-https://rickandmortyapi.com/api/character/?name=TU_BUSQUEDA
-
-🎨 Sistema de temas
-
-El modo oscuro/claro funciona con una clase:
-
-body.dark-mode { ... }
-
-
-Y las variables CSS se actualizan automáticamente.
-
-🔎 Búsqueda
-
-La búsqueda se hace sin recargar la página gracias al evento:
-
-searchForm.addEventListener('submit', ...)
-
 📌 Mejoras futuras
 
 Agregar paginación
